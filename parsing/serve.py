@@ -27,7 +27,7 @@ def vllm_version_tuple() -> tuple[int, ...]:
 
 
 installed = vllm_version_tuple()
-if installed == (0, 11):
+if installed[:2] == (0, 11):
     from modeling import modeling_monkeyocrv2_vllm_011  # noqa: F401
 elif installed >= (0, 25):
     from modeling import modeling_monkeyocrv2_vllm  # noqa: F401
